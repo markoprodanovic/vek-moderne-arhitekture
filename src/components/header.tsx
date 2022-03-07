@@ -77,11 +77,11 @@ const Header = ({ companyName }: Props) => {
             </IconButton>
           </Hidden>
           <Typography
-            variant="h6"
+            variant="h5"
             color="inherit"
             className={classes.toolbarTitle}
           >
-            VEK MODERNE ARHITEKTURE
+            VEK <span style={{ color: "#6FA5B5" }}>MODERNE</span> ARHITEKTURE
           </Typography>
 
           <Hidden xsDown>

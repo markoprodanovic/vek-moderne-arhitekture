@@ -39,7 +39,7 @@ const ItemWrapper = ({ title, description, id, children }: Props) => (
   <React.Fragment>
     <Typography
       id={id}
-      variant="h5"
+      variant="h6"
       style={{ fontWeight: 800, marginTop: "2rem" }}
     >
       {title}
