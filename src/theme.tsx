@@ -6,6 +6,9 @@ const theme = createMuiTheme({
     subtitle1: {
       color: "#7D7987",
     },
+    allVariants: {
+      color: "#233348",
+    },
   },
   palette: {
     type: "light",
@@ -16,11 +19,11 @@ const theme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: "#fff",
+      default: "#",
     },
     text: {
-      primary: "#000",
-      secondary: "#7D7987",
+      primary: "#233348",
+      secondary: "#6FA5B5",
       disabled: "#CCC",
       hint: "#7D7987",
     },

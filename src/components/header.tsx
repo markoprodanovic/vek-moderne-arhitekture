@@ -28,9 +28,16 @@ const useStyles = makeStyles(theme => ({
   },
   toolbarTitle: {
     flexGrow: 1,
+    fontWeight: 800,
+  },
+  drawerTitle: {
+    padding: 20,
+    color: "#000",
+    fontWeight: 800,
   },
   drawerList: {
-    width: 250,
+    width: "100%",
+    color: "#000",
   },
   drawerToggle: {
     padding: 20,
@@ -49,11 +56,9 @@ const Header = ({ companyName }: Props) => {
   }
 
   const navLinks = [
-    { displayText: "Home", link: "#" },
-    { displayText: "Services", link: "#services" },
-    { displayText: "Apps", link: "#apps" },
-    { displayText: "Testimonials", link: "#testimonials" },
-    { displayText: "Blog", link: "#blog" },
+    { displayText: "MAPA", link: "#" },
+    { displayText: "O KNJIZI", link: "#oknjizi" },
+    { displayText: "LINKKOVI", link: "#linkovi" },
   ]
 
   return (
@@ -76,12 +81,12 @@ const Header = ({ companyName }: Props) => {
             color="inherit"
             className={classes.toolbarTitle}
           >
-            vHealth
+            VEK MODERNE ARHITEKTURE
           </Typography>
 
           <Hidden xsDown>
             {navLinks.map(item => (
-              <Button color="inherit" key={item.displayText}>
+              <Button href={item.link} color="inherit" key={item.displayText}>
                 {item.displayText}
               </Button>
             ))}
@@ -98,9 +103,22 @@ const Header = ({ companyName }: Props) => {
           keepMounted: true, // Better open performance on mobile.
         }}
       >
+        <Typography
+          variant="h6"
+          color="inherit"
+          className={classes.drawerTitle}
+        >
+          VEK MODERNE ARHITEKTURE
+        </Typography>
         <List className={classes.drawerList}>
           {navLinks.map((item, index) => (
-            <ListItem button key={item.displayText}>
+            <ListItem
+              href={item.link}
+              component="a"
+              button
+              key={item.displayText}
+              onClick={handleDrawerClose}
+            >
               <ListItemText primary={item.displayText} />
             </ListItem>
           ))}
