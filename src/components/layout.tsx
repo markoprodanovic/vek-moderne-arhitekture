@@ -7,11 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import Footer from "./footer"
 import Box from "@material-ui/core/Box"
 
 interface Props {

@@ -13,6 +13,7 @@ import Drawer from "@material-ui/core/Drawer"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import List from "@material-ui/core/List"
+import Link from "@material-ui/core/Link"
 
 interface Props {
   companyName: string
@@ -56,9 +57,9 @@ const Header = ({ companyName }: Props) => {
   }
 
   const navLinks = [
-    { displayText: "MAPA", link: "#" },
-    { displayText: "O KNJIZI", link: "#oknjizi" },
-    { displayText: "LINKKOVI", link: "#linkovi" },
+    { displayText: "MAPA", link: "/" },
+    { displayText: "O KNJIZI", link: "/oknjizi" },
+    { displayText: "LINKKOVI", link: "/linkovi" },
   ]
 
   return (
@@ -76,13 +77,14 @@ const Header = ({ companyName }: Props) => {
               <MenuIcon />
             </IconButton>
           </Hidden>
-          <Typography
+          <Link
             variant="h5"
             color="inherit"
             className={classes.toolbarTitle}
+            href="/"
           >
             VEK <span style={{ color: "#6FA5B5" }}>MODERNE</span> ARHITEKTURE
-          </Typography>
+          </Link>
 
           <Hidden xsDown>
             {navLinks.map(item => (
