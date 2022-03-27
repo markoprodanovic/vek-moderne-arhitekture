@@ -57,7 +57,6 @@ const Header = ({ companyName }: Props) => {
   }
 
   const navLinks = [
-    { displayText: "MAPA", link: "/" },
     { displayText: "O KNJIZI", link: "/oknjizi" },
     { displayText: "LINKKOVI", link: "/linkovi" },
   ]
