@@ -48,7 +48,7 @@ const Oknjizi = () => {
       <div className={matches ? classes.containerMobile : classes.container}>
         <img
           className={matches ? classes.imageMobile : classes.image}
-          src="cover.png"
+          src="/cover.png"
         />
         <div className={classes.text}>
           <Typography className={classes.paragraph}>
