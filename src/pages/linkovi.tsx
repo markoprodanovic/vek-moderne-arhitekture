@@ -779,7 +779,7 @@ const Linkovi = () => {
                         <ListItem>
                           <Link
                             style={{
-                              color: "#0DC0E8",
+                              color: "#00A6CA",
                               fontFamily: "Helvetica",
                               fontWeight: 600,
                               display: "flex",

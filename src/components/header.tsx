@@ -91,7 +91,7 @@ const Header = ({ companyName }: Props) => {
             className={classes.toolbarTitle}
             href="/"
           >
-            VEK <span style={{ color: "#0DC0E8" }}>MODERNE</span> ARHITEKTURE
+            VEK <span style={{ color: "#00A6CA" }}>MODERNE</span> ARHITEKTURE
           </Link>
 
           <Hidden xsDown>

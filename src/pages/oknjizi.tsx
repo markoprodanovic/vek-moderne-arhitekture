@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     alignItems: "center",
     margin: "0 auto",
-    paddingTop: "25px",
+    paddingTop: 10,
   },
   image: {
     height: 650,
@@ -40,14 +40,15 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "16px",
   },
   langBtnContainer: {
-    width: "100%",
+    // width: "100%",
     display: "flex",
     justifyContent: "flex-end",
     marginBottom: "20px",
+    paddingRight: 24,
     [theme.breakpoints.down("xs")]: {
       display: "flex",
       justifyContent: "center",
-      marginLeft: 0,
+      paddingRight: 0,
     },
   },
 }))
@@ -56,8 +57,6 @@ const Oknjizi = () => {
   const classes = useStyles()
   const matches = useMediaQuery("(max-width:1200px)")
   const [isSerbian, setIsSerbian] = useState(true)
-
-  const boxShadow = "0 2px 4px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);"
 
   const serbianText = (
     <div className={classes.text}>
@@ -170,7 +169,7 @@ const Oknjizi = () => {
       <Header />
       <div className={classes.langBtnContainer}>
         <Button
-          style={{ marginRight: 24, backgroundColor: "#eee", color: "#000" }}
+          style={{ backgroundColor: "#eee", color: "#000" }}
           onClick={() => setIsSerbian(!isSerbian)}
           variant="contained"
           color="primary"
