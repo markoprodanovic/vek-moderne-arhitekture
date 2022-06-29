@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#fafafa`,
         theme_color: `#fafafa`,
         display: `minimal-ui`,
-        icon: `src/images/vhealth-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-material-ui`,

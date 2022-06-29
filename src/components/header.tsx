@@ -26,10 +26,19 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     flexWrap: "wrap",
+    display: "flex",
+    justifyContent: "center",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      justifyContent: "center",
+    },
   },
   toolbarTitle: {
     flexGrow: 1,
     fontWeight: 800,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.1rem",
+    },
   },
   drawerTitle: {
     padding: 20,
@@ -82,7 +91,7 @@ const Header = ({ companyName }: Props) => {
             className={classes.toolbarTitle}
             href="/"
           >
-            VEK <span style={{ color: "#6FA5B5" }}>MODERNE</span> ARHITEKTURE
+            VEK <span style={{ color: "#0DC0E8" }}>MODERNE</span> ARHITEKTURE
           </Link>
 
           <Hidden xsDown>

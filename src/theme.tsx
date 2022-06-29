@@ -12,18 +12,22 @@ const theme = createMuiTheme({
   },
   palette: {
     type: "light",
+    // primary: {
+    //   main: "#458FF6",
+    // },
     primary: {
-      main: "#458FF6",
+      main: "#fff",
+      contrastText: "#eee", //button text white instead of black
+    },
+    background: {
+      default: "#394764",
     },
     error: {
       main: red.A400,
     },
-    background: {
-      default: "#",
-    },
     text: {
       primary: "#233348",
-      secondary: "#6FA5B5",
+      secondary: "#0DC0E8",
       disabled: "#CCC",
       hint: "#7D7987",
     },
