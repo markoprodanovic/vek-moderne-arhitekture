@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import React from "react"
 
 import AppBar from "@material-ui/core/AppBar"
@@ -14,10 +13,6 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import List from "@material-ui/core/List"
 import Link from "@material-ui/core/Link"
-
-interface Props {
-  companyName: string
-}
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -54,7 +49,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Header = ({ companyName }: Props) => {
+const Header = () => {
   const classes = useStyles()
   const [open, setOpen] = React.useState(false)
 
@@ -67,6 +62,7 @@ const Header = ({ companyName }: Props) => {
 
   const navLinks = [
     { displayText: "O KNJIZI", link: "/oknjizi" },
+    { displayText: "O AUTORIMA", link: "/oautorima" },
     { displayText: "LINKOVI", link: "/linkovi" },
   ]
 
@@ -136,14 +132,6 @@ const Header = ({ companyName }: Props) => {
       </Drawer>
     </React.Fragment>
   )
-}
-
-Header.propTypes = {
-  companyName: PropTypes.string,
-}
-
-Header.defaultProps = {
-  companyName: `vHealth`,
 }
 
 export default Header
