@@ -90,7 +90,7 @@ function oautorima() {
         </Link>
       </div>
       <div className={classes.container} style={{ fontFamily: "Helvetica" }}>
-        <h3>PDF-ovi</h3>
+        <h4>KNJIGU SU PODRŽALI</h4>
         <p>
           <Link
             rel="noopener"
@@ -107,10 +107,10 @@ function oautorima() {
             rel="noopener"
             target="_blank"
             style={{ display: "flex", alignItems: "center", color: "#00A6CA" }}
-            href="/recenzija.pdf"
+            href="/recenzije.pdf"
           >
             <PictureAsPdfIcon style={{ marginRight: "3px" }} />
-            recenzija.pdf
+            recenzije.pdf
           </Link>
         </p>
       </div>

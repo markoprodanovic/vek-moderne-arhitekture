@@ -61,6 +61,7 @@ const Header = () => {
   }
 
   const navLinks = [
+    { displayText: "MAPA", link: "/" },
     { displayText: "O KNJIZI", link: "/oknjizi" },
     { displayText: "O AUTORIMA", link: "/oautorima" },
     { displayText: "LINKOVI", link: "/linkovi" },
