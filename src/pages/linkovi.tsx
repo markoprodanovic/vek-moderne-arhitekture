@@ -23,10 +23,6 @@ const links = [
             url: "https://www.youtube.com/watch?v=jM8mLQhC688",
           },
           {
-            title: "Bauhaus-The Face of the 20th Century",
-            url: "https://www.youtube.com/watch?v=OdqSmnGTwHc",
-          },
-          {
             title: "Reflections on the BSA: Walter Gropius",
             url: "https://www.youtube.com/watch?v=gQsOtO9Wy4c",
           },
@@ -164,10 +160,6 @@ const links = [
             url: "https://vimeo.com/169778985",
           },
           {
-            title: "Alvar Aalto documentary",
-            url: "www.youtube.com/watch?v=a8KCFXfWe94",
-          },
-          {
             title:
               "Alvar Aalto and the Future of the Modern Project / Kenneth Frampton",
             url: "https://www.youtube.com/watch?v=Mjd58mE76tU",
@@ -230,7 +222,6 @@ const links = [
       {
         name: "Luij Kan ( Louis Kahn)",
         urls: [
-          { title: "My Architect", url: "https://vimeo.com/67173077" },
           {
             title: "Louis kahn architect",
             url: "https://www.youtube.com/watch?v=ZbE3rmh62x4",
@@ -248,10 +239,6 @@ const links = [
       {
         name: "Kenzo Tange (Kenzo Tange)",
         urls: [
-          {
-            title: "Kenzo Tange architect in Japan Japanology",
-            url: "https://www.youtube.com/watch?v=dOA2Lx17KwM",
-          },
           {
             title:
               "The Rule of the Game - Christian Kerez, 2012 Kenzo Tange Lecture",
@@ -354,6 +341,10 @@ const links = [
           {
             title: "O’Hare Global Terminal Design",
             url: "https://www.youtube.com/watch?v=Pf79qrl2gDA",
+          },
+          {
+            title: "Norman Foster Interview: Advice to the Young",
+            url: "https://youtu.be/fRI2F6Vz2qU?si=elSd6L_x3Y1fKNOk",
           },
         ],
       },
@@ -493,8 +484,12 @@ const links = [
             url: "https://www.youtube.com/watch?v=HP8ifcS8wMw",
           },
           {
-            title: "Peter Eisennman 13 Ways of thinking about heteronomy",
+            title: "Peter Eisenman 13 Ways of thinking about heteronomy",
             url: "https://www.youtube.com/watch?v=T2JOIQkdqMM",
+          },
+          {
+            title: "Peter Eisenman Interview: Advice to the Young",
+            url: "https://youtu.be/-QbpgLK-P_c?si=YMvjVDDdJwaSzLMC",
           },
         ],
       },
@@ -520,7 +515,7 @@ const links = [
         ],
       },
       {
-        name: "Frenk O Geri (Frank Gehry)",
+        name: "Frenk Geri (Frank Gehry)",
         urls: [
           {
             title: "Frank Gehry Interview Jump into the unknown",
@@ -535,15 +530,20 @@ const links = [
             url:
               "https://www.cbsnews.com/video/the-playful-architecture-of-frank-gehry/#x",
           },
+          {
+            title: "Creating Feeling with Frank Gehry",
+            url: "https://youtu.be/v98ahM6mr-w?si=UrDx__YkmZGpnOr9",
+          },
+          {
+            title:
+              'Frank Gehry "Do you have any advice for the young architects"',
+            url: "https://youtu.be/Bedps1yowZw?si=3DD-0n3rAE2jPnzU",
+          },
         ],
       },
       {
         name: "Daniel Libeskind (Daniel Libeskind)",
         urls: [
-          {
-            title: "Interview Advice to the Young ",
-            url: "https://www.youtube.com/watch?v=QVoQp3sqcak",
-          },
           {
             title: "Daniel Libeskind Emotion in Architecture",
             url: "https://www.youtube.com/watch?v=j64YQdrE5CU",
@@ -559,6 +559,14 @@ const links = [
           {
             title: "17 words of architectural inspiration",
             url: "https://www.youtube.com/watch?v=G8w4UQL6aI0",
+          },
+          {
+            title: "Daniel Libeskind - Personal biography and influences",
+            url: "https://youtu.be/5Jl3WrUrzMg?si=0Tjsz0irDTyIJkBk",
+          },
+          {
+            title: "Daniel Lebeskind Interview: Advice to the Young",
+            url: "https://www.youtube.com/watch?v=QVoQp3sqcak",
           },
         ],
       },
@@ -603,6 +611,10 @@ const links = [
             title: "Architect Peter Zumthor",
             url: "https://www.youtube.com/watch?v=lufVOqRWpLQ",
           },
+          {
+            title: "Peter Zumthor & The Serpentine Gallery",
+            url: "https://youtu.be/DfSIsCxhtZc?si=weFAbjXP0xVgkZwE",
+          },
         ],
       },
       {
@@ -641,8 +653,9 @@ const links = [
             url: "https://www.youtube.com/watch?v=eUHUqrAAxds",
           },
           {
-            title: "Stefano Boeri Green obsession",
-            url: "https://www.stefanoboeriarchitetti.net/",
+            title:
+              "Trees in the sky - a vertical forest in Milan: Stefano BOERI at TEDxTirana",
+            url: "https://youtu.be/jH4Q6ddchPc?si=g_xkV2fxsH6acWbE",
           },
         ],
       },
@@ -708,47 +721,56 @@ const links = [
               "Word Trade Center Oculus Explained by architect Saintiago Calatrava",
             url: "https://www.youtube.com/watch?v=wdgWyT-qrXQ",
           },
+          {
+            title: "ArchDaily Interviews: Santiago Calatruva",
+            url: "https://youtu.be/kS9RTqlOqVc?si=IEAi5Orx2AIwiKYZ",
+          },
+          {
+            title:
+              'Spanish architect Santiago Calatruva: "I will work until the last day of my life"',
+            url: "https://youtu.be/AaGiXKChquA?si=wHc9eB9db7mp0e-P",
+          },
         ],
       },
     ],
   },
 ]
 
-const architectList = () => {
-  return (
-    <Accordion>
-      {links.map(member => (
-        <React.Fragment>
-          <AccordionSummary aria-controls="panel1a" id="panel1a">
-            <Typography variant="h6">{member.era}</Typography>
-          </AccordionSummary>
-          <AccordionDetails
-            style={{ display: "flex", flexDirection: "column" }}
-          >
-            {member.architects.map(architect => {
-              console.log(architect)
-              return (
-                <React.Fragment>
-                  <Typography>{architect.name}</Typography>
-                  <List>
-                    {architect.urls.map(link => (
-                      <ListItem>
-                        <Link href={link.url} rel="noopener" target="_blank">
-                          {link.title}
-                          <OpenNewIcon />
-                        </Link>
-                      </ListItem>
-                    ))}
-                  </List>
-                </React.Fragment>
-              )
-            })}
-          </AccordionDetails>
-        </React.Fragment>
-      ))}
-    </Accordion>
-  )
-}
+// const architectList = () => {
+//   return (
+//     <Accordion>
+//       {links.map(member => (
+//         <React.Fragment>
+//           <AccordionSummary aria-controls="panel1a" id="panel1a">
+//             <Typography variant="h6">{member.era}</Typography>
+//           </AccordionSummary>
+//           <AccordionDetails
+//             style={{ display: "flex", flexDirection: "column" }}
+//           >
+//             {member.architects.map(architect => {
+//               console.log(architect)
+//               return (
+//                 <React.Fragment>
+//                   <Typography>{architect.name}</Typography>
+//                   <List>
+//                     {architect.urls.map(link => (
+//                       <ListItem>
+//                         <Link href={link.url} rel="noopener" target="_blank">
+//                           {link.title}
+//                           <OpenNewIcon />
+//                         </Link>
+//                       </ListItem>
+//                     ))}
+//                   </List>
+//                 </React.Fragment>
+//               )
+//             })}
+//           </AccordionDetails>
+//         </React.Fragment>
+//       ))}
+//     </Accordion>
+//   )
+// }
 
 const Linkovi = () => {
   return (
