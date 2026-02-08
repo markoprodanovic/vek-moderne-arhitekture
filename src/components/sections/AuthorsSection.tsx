@@ -3,7 +3,7 @@ import SectionContainer from "@/components/ui/SectionContainer";
 
 export default function AuthorsSection() {
   return (
-    <section className="w-full bg-white text-[#1E1E1E]">
+    <section className="w-full bg-[#FBF9F7] text-[#1E1E1E]">
       <SectionContainer>
         <div className="w-full">
           <h2 className="text-2xl md:text-5xl font-medium mb-16">O AUTORIMA</h2>

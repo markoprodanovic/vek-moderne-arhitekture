@@ -2,6 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import MapSection from "@/components/sections/MapSection";
 import AboutSection from "@/components/sections/AboutSection";
 import AuthorsSection from "@/components/sections/AuthorsSection";
+import LinksSection from "@/components/sections/LinksSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <MapSection />
       <AboutSection />
       <AuthorsSection />
+      <LinksSection />
     </div>
   );
 }
