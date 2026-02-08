@@ -14,17 +14,17 @@ export default function EraItem({ era, index }: EraItemProps) {
     <div className="border-b border-[#494949] last:border-b-0">
       <button
         onClick={toggleExpanded}
-        className="w-full py-6 flex justify-between items-center text-left hover:bg-[#F5F1ED] transition-colors"
+        className="w-full py-6 flex justify-between items-center text-left transition-colors group"
         aria-expanded={isExpanded}
         aria-controls={`era-content-${index}`}
       >
-        <h3 className="text-lg md:text-xl font-medium text-[#1E1E1E]">
+        <h3 className="text-lg md:text-xl font-medium text-[#1E1E1E] group-hover:text-[#4b4b4b]">
           {era.era}
         </h3>
         <div className="ml-4 shrink-0">
           <svg
             className={`w-5 h-5 transform transition-transform duration-200 ${
-              isExpanded ? "rotate-90" : "rotate-0"
+              isExpanded ? "rotate-90" : "-rotate-90"
             }`}
             fill="none"
             viewBox="0 0 24 24"
