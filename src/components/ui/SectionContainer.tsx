@@ -12,7 +12,7 @@ export default function SectionContainer({
   return (
     <section className="flex items-center justify-center">
       <div
-        className={`flex w-full max-w-[90vw] flex-col items-center py-16 px-4 md:py-16 md:px-8 min-[1090px]:py-32 min-[1090px]:px-12 xl:py-32 xl:px-16 ${className}`}
+        className={`flex w-full max-w-[85vw] flex-col items-center py-16 px-4 md:py-16 md:px-8 min-[1090px]:py-32 min-[1090px]:px-12 xl:py-32 xl:px-16 ${className}`}
       >
         {children}
       </div>
