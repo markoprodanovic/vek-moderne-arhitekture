@@ -14,7 +14,6 @@ export default function ContactSection() {
                 <ContactForm />
               </div>
             </div>
-            <div className="w-full h-px bg-white mt-16 mb-8"></div>
           </div>
         </div>
       </div>
