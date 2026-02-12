@@ -3,6 +3,7 @@ import MapSection from "@/components/sections/MapSection";
 import AboutSection from "@/components/sections/AboutSection";
 import AuthorsSection from "@/components/sections/AuthorsSection";
 import LinksSection from "@/components/sections/LinksSection";
+import ContactSection from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutSection />
       <AuthorsSection />
       <LinksSection />
+      <ContactSection />
     </div>
   );
 }
