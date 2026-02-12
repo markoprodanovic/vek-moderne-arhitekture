@@ -1,6 +1,6 @@
 import ContactForm from "@/components/ui/ContactForm";
 
-export default function ContactSection() {
+export default function Contact() {
   return (
     <section className="w-full bg-[#1E1E1E] text-white">
       <div className="flex items-center justify-center">

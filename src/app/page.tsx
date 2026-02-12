@@ -1,20 +1,20 @@
-import HeroSection from "@/components/sections/HeroSection";
-import MapSection from "@/components/sections/MapSection";
-import AboutSection from "@/components/sections/AboutSection";
-import AuthorsSection from "@/components/sections/AuthorsSection";
-import LinksSection from "@/components/sections/LinksSection";
-import ContactSection from "@/components/sections/ContactSection";
+import Hero from "@/components/sections/Hero";
+import Map from "@/components/sections/Map";
+import About from "@/components/sections/About";
+import Authors from "@/components/sections/Authors";
+import Links from "@/components/sections/Links";
+import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
     <div className="font-sans">
-      <HeroSection />
-      <MapSection />
-      <AboutSection />
-      <AuthorsSection />
-      <LinksSection />
-      <ContactSection />
+      <Hero />
+      <Map />
+      <About />
+      <Authors />
+      <Links />
+      <Contact />
       <Footer />
     </div>
   );

@@ -7,7 +7,7 @@ import { Era } from "@/types/links";
 
 const DEFAULT_ERROR_MESSAGE = "Failed to fetch links";
 
-export default function LinksSection() {
+export default function Links() {
   const [eras, setEras] = useState<Era[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

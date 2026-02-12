@@ -1,6 +1,6 @@
 import SectionContainer from "@/components/ui/SectionContainer";
 
-export default function MapSection() {
+export default function Map() {
   return (
     <SectionContainer>
       <div className="w-full">

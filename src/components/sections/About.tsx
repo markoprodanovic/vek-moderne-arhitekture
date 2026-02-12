@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { translations, type Language } from "@/data/translations";
 
-export default function AboutSection() {
+export default function About() {
   const [selectedLanguage, setSelectedLanguage] = useState<Language>("srpski");
 
   const currentContent = translations[selectedLanguage];

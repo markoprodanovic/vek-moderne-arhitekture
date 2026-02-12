@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SectionContainer from "@/components/ui/SectionContainer";
 
-export default function AuthorsSection() {
+export default function Authors() {
   return (
     <section className="w-full bg-[#FBF9F7] text-[#1E1E1E]">
       <SectionContainer>
