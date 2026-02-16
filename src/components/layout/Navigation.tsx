@@ -2,6 +2,7 @@
 
 import { useState, useLayoutEffect } from "react";
 import NavigationItem from "./NavigationItem";
+import MapNavigationItem from "./MapNavigationItem";
 
 const navigationItems = [
   { id: "mapa", label: "MAPA", targetSection: "map" },
@@ -95,13 +96,23 @@ export default function Navigation() {
         <ul className="flex items-center justify-between">
           {navigationItems.map((item) => (
             <li key={item.id}>
-              <NavigationItem
-                id={item.id}
-                label={item.label}
-                targetSection={item.targetSection}
-                isActive={activeSection === item.targetSection}
-                isSticky={isSticky}
-              />
+              {item.id === "mapa" ? (
+                <MapNavigationItem
+                  id={item.id}
+                  label={item.label}
+                  targetSection={item.targetSection}
+                  isActive={activeSection === item.targetSection}
+                  isSticky={isSticky}
+                />
+              ) : (
+                <NavigationItem
+                  id={item.id}
+                  label={item.label}
+                  targetSection={item.targetSection}
+                  isActive={activeSection === item.targetSection}
+                  isSticky={isSticky}
+                />
+              )}
             </li>
           ))}
         </ul>
