@@ -9,7 +9,7 @@ export default function About() {
   const currentContent = translations[selectedLanguage];
 
   return (
-    <section className="w-full bg-[#1E1E1E] text-white">
+    <section id="about" className="w-full bg-[#1E1E1E] text-white">
       <div className="flex items-center justify-center">
         <div className="flex w-full max-w-[90vw] flex-col items-center py-16 px-4 md:py-16 md:px-8 min-[1090px]:py-32 min-[1090px]:px-12 xl:py-32 xl:px-16">
           <div className="w-full">

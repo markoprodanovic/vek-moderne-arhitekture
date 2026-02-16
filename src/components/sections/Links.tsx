@@ -33,7 +33,7 @@ export default function Links() {
 
   if (loading) {
     return (
-      <section className="w-full bg-[#FBF9F7] text-[#1E1E1E]">
+      <section id="links" className="w-full bg-[#FBF9F7] text-[#1E1E1E]">
         <SectionContainer>
           <div className="w-full">
             <h2 className="text-2xl md:text-5xl font-medium mb-16">LINKOVI</h2>
@@ -50,7 +50,7 @@ export default function Links() {
 
   if (error) {
     return (
-      <section className="w-full bg-[#FBF9F7] text-[#1E1E1E]">
+      <section id="links" className="w-full bg-[#FBF9F7] text-[#1E1E1E]">
         <SectionContainer>
           <div className="w-full">
             <h2 className="text-2xl md:text-5xl font-medium mb-16">LINKOVI</h2>
@@ -66,7 +66,7 @@ export default function Links() {
   }
 
   return (
-    <section className="w-full bg-[#FBF9F7] text-[#1E1E1E]">
+    <section id="links" className="w-full bg-[#FBF9F7] text-[#1E1E1E]">
       <SectionContainer>
         <div className="w-full">
           <h2 className="text-2xl md:text-5xl font-medium mb-16">LINKOVI</h2>

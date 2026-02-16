@@ -2,7 +2,7 @@ import SectionContainer from "@/components/ui/SectionContainer";
 
 export default function Map() {
   return (
-    <SectionContainer>
+    <SectionContainer id="map">
       <div className="w-full">
         <h1 className="text-2xl md:text-5xl font-medium">MAPA</h1>
         <p className="pt-8">
