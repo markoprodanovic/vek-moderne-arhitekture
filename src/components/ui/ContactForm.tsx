@@ -5,6 +5,11 @@ import { useState, useEffect } from "react";
 export default function ContactForm() {
   const [result, setResult] = useState("");
   const [isVisible, setIsVisible] = useState(true);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   useEffect(() => {
     if (result) {
@@ -18,10 +23,23 @@ export default function ContactForm() {
     }
   }, [result]);
 
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    formData.append(
+    const form = new FormData();
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("message", formData.message);
+    form.append(
       "access_key",
       process.env.NEXT_PUBLIC_CONTACT_FORM_ACCESS_KEY || "",
     );
@@ -30,12 +48,20 @@ export default function ContactForm() {
       process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT || "",
       {
         method: "POST",
-        body: formData,
+        body: form,
       },
     );
 
     const data = await response.json();
-    setResult(data.success ? "Success" : "Error");
+    if (data.success) {
+      // Clear the form on successful submission
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }
+    setResult(data.success ? "Uspešno" : "Greška");
     setIsVisible(true);
   };
 
@@ -50,6 +76,8 @@ export default function ContactForm() {
           id="name"
           name="name"
           placeholder="Ime"
+          value={formData.name}
+          onChange={handleInputChange}
           required
           className="w-full px-4 py-3 bg-[#2A2A2A] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-white transition-colors"
         />
@@ -64,6 +92,8 @@ export default function ContactForm() {
           id="email"
           name="email"
           placeholder="Email"
+          value={formData.email}
+          onChange={handleInputChange}
           required
           className="w-full px-4 py-3 bg-[#2A2A2A] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-white transition-colors"
         />
@@ -77,6 +107,8 @@ export default function ContactForm() {
           id="message"
           name="message"
           placeholder="Poruka"
+          value={formData.message}
+          onChange={handleInputChange}
           required
           rows={6}
           className="w-full px-4 py-3 bg-[#2A2A2A] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-white transition-colors resize-vertical"
@@ -89,13 +121,13 @@ export default function ContactForm() {
             type="submit"
             className="px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1E1E1E] transition-colors font-medium"
           >
-            Podneti
+            Pošalji
           </button>
           {result && (
             <p
               className={`absolute top-full right-0 mt-2 font-medium transition-opacity duration-500 ${
                 isVisible ? "opacity-100" : "opacity-0"
-              } ${result === "Success" ? "text-[#ACE599]" : "text-[#E58686]"}`}
+              } ${result === "Uspešno" ? "text-[#ACE599]" : "text-[#E58686]"}`}
             >
               {result}
             </p>
