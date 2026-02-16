@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex items-center justify-center pt-16 md:pt-16 min-[1090px]:pt-32 xl:pt-32"
+      className="flex items-center justify-center pt-16 md:pt-16 min-[1090px]:pt-32 xl:pt-32 pb-[25vh]"
     >
       <div className="flex w-full max-w-[85vw] flex-col items-center px-4 md:px-8 min-[1090px]:px-12 xl:px-16">
         <div className="w-full flex flex-col min-[1090px]:flex-row gap-8 min-[1090px]:gap-0 min-[1090px]:items-end">

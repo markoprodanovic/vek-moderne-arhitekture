@@ -89,7 +89,7 @@ export default function Navigation() {
         className={`w-full max-w-[85vw] transition-all duration-300 ease-in-out ${
           isSticky
             ? "py-4 px-4 md:px-8 min-[1090px]:px-12 xl:px-16"
-            : "pb-12 pt-[35vh] px-4 md:px-8 min-[1090px]:px-12 xl:px-16"
+            : "py-12 px-4 md:px-8 min-[1090px]:px-12 xl:px-16"
         }`}
       >
         <ul className="flex items-center justify-between">

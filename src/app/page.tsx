@@ -5,11 +5,13 @@ import Authors from "@/components/sections/Authors";
 import Links from "@/components/sections/Links";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import Navigation from "@/components/layout/Navigation";
 
 export default function Home() {
   return (
     <div className="font-sans">
       <Hero />
+      <Navigation />
       <Map />
       <About />
       <Authors />
