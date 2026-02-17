@@ -1,5 +1,4 @@
 interface NavigationItemProps {
-  id: string;
   label: string;
   targetSection: string;
   isActive?: boolean;
@@ -7,7 +6,6 @@ interface NavigationItemProps {
 }
 
 export default function NavigationItem({
-  id,
   label,
   targetSection,
   isActive = false,
