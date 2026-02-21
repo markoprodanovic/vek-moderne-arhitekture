@@ -43,7 +43,7 @@ export default function MobileNavigation({
 
   return (
     <div className="w-full lg:hidden">
-      <nav className="fixed top-0 left-0 z-65 w-full bg-white/95 shadow-sm">
+      <nav className="fixed top-0 left-0 z-[65] w-full bg-[#FBF9F7]">
         <div className="w-full max-w-[85vw] mx-auto px-4 py-2 flex justify-end">
           <button
             onClick={() => setIsMenuOpen(true)}
@@ -61,28 +61,10 @@ export default function MobileNavigation({
         </div>
       </nav>
 
-      <div className="w-full max-w-[85vw] mx-auto px-4 pb-8">
-        <div className="flex justify-center pb-20">
-          <button
-            onClick={() => onNavigate("map")}
-            className="hover:opacity-80 transition-opacity duration-300"
-            aria-label="Idi na mapu"
-          >
-            <div className="relative flex items-center justify-center w-28 h-28">
-              <div className="absolute inset-0 rounded-full bg-[#1E1E1E] animate-pulse-gentle" />
-              <span className="relative z-10 text-white text-xl font-medium">
-                MAPA
-              </span>
-            </div>
-          </button>
-        </div>
-        <div className="h-px bg-[#A3A3A3]" />
-      </div>
-
       <div
         id="mobile-navigation-menu"
         aria-hidden={!isMenuOpen}
-        className={`fixed inset-0 z-70 lg:hidden bg-[#FBF9F7] text-[#1E1E1E] transition-all duration-300 ease-in-out ${
+        className={`fixed inset-0 z-[70] lg:hidden bg-[#FBF9F7] text-[#1E1E1E] transition-all duration-300 ease-in-out ${
           isMenuOpen
             ? "translate-y-0 opacity-100 visible"
             : "-translate-y-full opacity-0 invisible pointer-events-none"
@@ -127,23 +109,6 @@ export default function MobileNavigation({
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes pulse-gentle {
-          0%,
-          100% {
-            transform: scale(1);
-            opacity: 0.85;
-          }
-          50% {
-            transform: scale(1.08);
-            opacity: 1;
-          }
-        }
-        .animate-pulse-gentle {
-          animation: pulse-gentle 2s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 }

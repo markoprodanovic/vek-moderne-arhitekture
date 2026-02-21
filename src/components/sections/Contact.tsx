@@ -2,7 +2,7 @@ import ContactForm from "@/components/ui/ContactForm";
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full bg-[#1E1E1E] text-white">
+    <section id="contact" className="w-full bg-[#1E1E1E] text-[#FBF9F7]">
       <div className="flex items-center justify-center">
         <div className="flex w-full max-w-[90vw] flex-col items-center py-16 px-4 md:py-16 md:px-8 min-[1090px]:py-32 min-[1090px]:px-12 xl:py-32 xl:px-16">
           <div className="w-full">

@@ -46,7 +46,7 @@ export default function MapNavigationItem({
         </div>
         <span
           className={`transition-all duration-500 ease-out relative z-10 ${
-            isSticky ? "text-[#1E1E1E]" : "text-white"
+            isSticky ? "text-[#1E1E1E]" : "text-[#FBF9F7]"
           }`}
         >
           {label}

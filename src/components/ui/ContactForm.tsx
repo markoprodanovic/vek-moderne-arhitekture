@@ -68,7 +68,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-6">
       <div className="space-y-2">
-        <label htmlFor="name" className="block text-white font-medium">
+        <label htmlFor="name" className="block text-[#FBF9F7] font-medium">
           Ime
         </label>
         <input
@@ -79,12 +79,12 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleInputChange}
           required
-          className="w-full px-4 py-3 bg-[#2A2A2A] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-white transition-colors"
+          className="w-full px-4 py-3 bg-[#2A2A2A] text-[#FBF9F7] placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-[#FBF9F7] transition-colors"
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="email" className="block text-white font-medium">
+        <label htmlFor="email" className="block text-[#FBF9F7] font-medium">
           Email
         </label>
         <input
@@ -95,12 +95,12 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleInputChange}
           required
-          className="w-full px-4 py-3 bg-[#2A2A2A] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-white transition-colors"
+          className="w-full px-4 py-3 bg-[#2A2A2A] text-[#FBF9F7] placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-[#FBF9F7] transition-colors"
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="message" className="block text-white font-medium">
+        <label htmlFor="message" className="block text-[#FBF9F7] font-medium">
           Poruka
         </label>
         <textarea
@@ -111,7 +111,7 @@ export default function ContactForm() {
           onChange={handleInputChange}
           required
           rows={6}
-          className="w-full px-4 py-3 bg-[#2A2A2A] text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-white transition-colors resize-vertical"
+          className="w-full px-4 py-3 bg-[#2A2A2A] text-[#FBF9F7] placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-[#FBF9F7] transition-colors resize-vertical"
         ></textarea>
       </div>
 
@@ -119,7 +119,7 @@ export default function ContactForm() {
         <div className="relative">
           <button
             type="submit"
-            className="px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1E1E1E] transition-colors font-medium"
+            className="px-8 py-3 border border-[#FBF9F7] text-[#FBF9F7] hover:bg-[#FBF9F7] hover:text-[#1E1E1E] transition-colors font-medium"
           >
             Pošalji
           </button>

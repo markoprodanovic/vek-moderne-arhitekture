@@ -9,7 +9,7 @@ export default function About() {
   const currentContent = translations[selectedLanguage];
 
   return (
-    <section id="about" className="w-full bg-[#1E1E1E] text-white">
+    <section id="about" className="w-full bg-[#1E1E1E] text-[#FBF9F7]">
       <div className="flex items-center justify-center">
         <div className="flex w-full max-w-[90vw] flex-col items-center py-16 px-4 md:py-16 md:px-8 min-[1090px]:py-32 min-[1090px]:px-12 xl:py-32 xl:px-16">
           <div className="w-full">
@@ -19,8 +19,8 @@ export default function About() {
                 onClick={() => setSelectedLanguage("srpski")}
                 className={`text-sm md:text-base font-medium border-b-2 pb-1 ${
                   selectedLanguage === "srpski"
-                    ? "border-white"
-                    : "border-transparent text-white/70 hover:text-white"
+                    ? "border-[#FBF9F7]"
+                    : "border-transparent text-[#FBF9F7]/70 hover:text-[#FBF9F7]"
                 }`}
               >
                 SRPSKI
@@ -29,8 +29,8 @@ export default function About() {
                 onClick={() => setSelectedLanguage("english")}
                 className={`text-sm md:text-base font-medium border-b-2 pb-1 ${
                   selectedLanguage === "english"
-                    ? "border-white"
-                    : "border-transparent text-white/70 hover:text-white"
+                    ? "border-[#FBF9F7]"
+                    : "border-transparent text-[#FBF9F7]/70 hover:text-[#FBF9F7]"
                 }`}
               >
                 ENGLISH
@@ -41,7 +41,7 @@ export default function About() {
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
-            <div className="w-full h-px bg-white mt-16 mb-8"></div>
+            <div className="w-full h-px bg-[#FBF9F7] mt-16 mb-8"></div>
           </div>
         </div>
       </div>

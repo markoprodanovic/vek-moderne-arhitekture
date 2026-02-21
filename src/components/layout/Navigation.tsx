@@ -12,6 +12,7 @@ const observedSections = [
 
 export default function Navigation() {
   const sentinelRef = useRef<HTMLDivElement>(null);
+  const desktopNavRef = useRef<HTMLElement>(null);
   const isStickyRef = useRef(false);
   const [isSticky, setIsSticky] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -75,11 +76,32 @@ export default function Navigation() {
     };
   }, []);
 
+  useEffect(() => {
+    const updateDesktopNavHeight = () => {
+      const navHeight = desktopNavRef.current?.offsetHeight ?? 0;
+      document.documentElement.style.setProperty(
+        "--desktop-nav-height",
+        `${navHeight}px`,
+      );
+    };
+
+    updateDesktopNavHeight();
+    window.addEventListener("resize", updateDesktopNavHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateDesktopNavHeight);
+    };
+  }, []);
+
   return (
     <>
       <div ref={sentinelRef} className="h-px" />
       <MobileNavigation onNavigate={scrollToSection} />
-      <DesktopNavigation isSticky={isSticky} activeSection={activeSection} />
+      <DesktopNavigation
+        isSticky={isSticky}
+        activeSection={activeSection}
+        navRef={desktopNavRef}
+      />
     </>
   );
 }
