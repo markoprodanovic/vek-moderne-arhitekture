@@ -1,16 +1,9 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import NavigationItem from "./NavigationItem";
-import MapNavigationItem from "./MapNavigationItem";
-
-const navigationItems = [
-  { label: "MAPA", section: "map" },
-  { label: "O KNIZI", section: "about" },
-  { label: "O AUTORIMA", section: "authors" },
-  { label: "LINKOVI", section: "links" },
-  { label: "KONTAKT", section: "contact" },
-];
+import DesktopNavigation from "./DesktopNavigation";
+import MobileNavigation from "./MobileNavigation";
+import { navigationItems } from "./navigationItems";
 
 const observedSections = [
   "hero",
@@ -22,6 +15,16 @@ export default function Navigation() {
   const isStickyRef = useRef(false);
   const [isSticky, setIsSticky] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   useEffect(() => {
     const sectionObserver = new IntersectionObserver(
@@ -75,34 +78,8 @@ export default function Navigation() {
   return (
     <>
       <div ref={sentinelRef} className="h-px" />
-      <nav
-        className={`sticky top-0 z-50 w-full hidden lg:flex justify-center transition-all duration-300 ease-in-out ${
-          isSticky ? "bg-white/95 shadow-sm" : "bg-white/90 backdrop-blur-sm"
-        }`}
-      >
-        <div
-          className={`w-full max-w-[85vw] px-4 md:px-8 min-[1090px]:px-12 xl:px-16 transition-all duration-300 ease-in-out ${
-            isSticky ? "py-4" : "py-12"
-          }`}
-        >
-          <ul className="flex items-center justify-between">
-            {navigationItems.map((item) => {
-              const Component =
-                item.section === "map" ? MapNavigationItem : NavigationItem;
-              return (
-                <li key={item.section}>
-                  <Component
-                    label={item.label}
-                    targetSection={item.section}
-                    isActive={activeSection === item.section}
-                    isSticky={isSticky}
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </nav>
+      <MobileNavigation onNavigate={scrollToSection} />
+      <DesktopNavigation isSticky={isSticky} activeSection={activeSection} />
     </>
   );
 }
