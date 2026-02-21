@@ -43,7 +43,7 @@ export default function MobileNavigation({
 
   return (
     <div className="w-full lg:hidden">
-      <nav className="fixed top-0 left-0 z-[65] w-full bg-[#FBF9F7]">
+      <nav className="fixed top-0 left-0 z-65 w-full bg-[#FBF9F7]">
         <div className="w-full max-w-[85vw] mx-auto px-4 py-2 flex justify-end">
           <button
             onClick={() => setIsMenuOpen(true)}
@@ -64,7 +64,7 @@ export default function MobileNavigation({
       <div
         id="mobile-navigation-menu"
         aria-hidden={!isMenuOpen}
-        className={`fixed inset-0 z-[70] lg:hidden bg-[#FBF9F7] text-[#1E1E1E] transition-all duration-300 ease-in-out ${
+        className={`fixed inset-0 z-70 lg:hidden bg-[#FBF9F7] text-[#1E1E1E] transition-all duration-300 ease-in-out ${
           isMenuOpen
             ? "translate-y-0 opacity-100 visible"
             : "-translate-y-full opacity-0 invisible pointer-events-none"
