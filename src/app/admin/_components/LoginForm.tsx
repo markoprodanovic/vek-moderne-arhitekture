@@ -17,7 +17,10 @@ export default function LoginForm() {
     setLoading(true);
 
     const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
     if (error) {
       setError("Invalid email or password.");
@@ -46,7 +49,7 @@ export default function LoginForm() {
       </div>
       <div>
         <label className="block text-sm font-medium mb-1" htmlFor="password">
-          Lozinka
+          Password
         </label>
         <input
           id="password"
