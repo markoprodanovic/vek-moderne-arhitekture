@@ -18,13 +18,7 @@ import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 import LinkRow from "./LinkRow";
 import AddItemForm from "./AddItemForm";
 import { createLink, reorderLinks } from "../actions";
-
-interface LinkItem {
-  id: string;
-  title: string;
-  url: string;
-  sort_order: number;
-}
+import type { LinkItem } from "@/types/admin";
 
 interface Props {
   architectId: string;

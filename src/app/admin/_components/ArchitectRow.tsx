@@ -7,19 +7,7 @@ import InlineEditField from "./InlineEditField";
 import DeleteButton from "./DeleteButton";
 import LinkList from "./LinkList";
 import { updateArchitectName, deleteArchitect } from "../actions";
-
-interface LinkItem {
-  id: string;
-  title: string;
-  url: string;
-  sort_order: number;
-}
-
-interface ArchitectItem {
-  id: string;
-  name: string;
-  links: LinkItem[];
-}
+import type { ArchitectItem } from "@/types/admin";
 
 interface Props {
   architect: ArchitectItem;

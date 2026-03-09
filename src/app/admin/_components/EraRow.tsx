@@ -7,27 +7,7 @@ import InlineEditField from "./InlineEditField";
 import DeleteButton from "./DeleteButton";
 import ArchitectList from "./ArchitectList";
 import { updateEraName, deleteEra } from "../actions";
-
-interface LinkItem {
-  id: string;
-  title: string;
-  url: string;
-  sort_order: number;
-}
-
-interface ArchitectItem {
-  id: string;
-  era_id: string;
-  name: string;
-  sort_order: number;
-  links: LinkItem[];
-}
-
-interface EraItem {
-  id: string;
-  name: string;
-  architects: ArchitectItem[];
-}
+import type { EraItem } from "@/types/admin";
 
 interface Props {
   era: EraItem;

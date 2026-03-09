@@ -5,12 +5,7 @@ import { CSS } from "@dnd-kit/utilities";
 import InlineEditField from "./InlineEditField";
 import DeleteButton from "./DeleteButton";
 import { updateLink, deleteLink } from "../actions";
-
-interface LinkItem {
-  id: string;
-  title: string;
-  url: string;
-}
+import type { LinkItem } from "@/types/admin";
 
 interface Props {
   link: LinkItem;

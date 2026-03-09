@@ -18,28 +18,7 @@ import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 import EraRow from "./EraRow";
 import AddItemForm from "./AddItemForm";
 import { createEra, reorderEras } from "../actions";
-
-interface LinkItem {
-  id: string;
-  title: string;
-  url: string;
-  sort_order: number;
-}
-
-interface ArchitectItem {
-  id: string;
-  era_id: string;
-  name: string;
-  sort_order: number;
-  links: LinkItem[];
-}
-
-interface EraItem {
-  id: string;
-  name: string;
-  sort_order: number;
-  architects: ArchitectItem[];
-}
+import type { EraItem } from "@/types/admin";
 
 interface Props {
   initialEras: EraItem[];

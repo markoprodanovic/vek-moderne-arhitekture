@@ -18,20 +18,7 @@ import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 import ArchitectRow from "./ArchitectRow";
 import AddItemForm from "./AddItemForm";
 import { createArchitect, reorderArchitects } from "../actions";
-
-interface LinkItem {
-  id: string;
-  title: string;
-  url: string;
-  sort_order: number;
-}
-
-interface ArchitectItem {
-  id: string;
-  name: string;
-  sort_order: number;
-  links: LinkItem[];
-}
+import type { ArchitectItem } from "@/types/admin";
 
 interface Props {
   eraId: string;
