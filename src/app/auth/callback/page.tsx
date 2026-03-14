@@ -9,16 +9,28 @@ export default function AuthCallbackPage() {
 
   useEffect(() => {
     const supabase = createClient();
+    const params = new URLSearchParams(window.location.hash.slice(1));
+    const accessToken = params.get("access_token");
+    const refreshToken = params.get("refresh_token");
+    const type = params.get("type");
 
-    supabase.auth.getSession().then(() => {
-      const hash = window.location.hash;
-      const params = new URLSearchParams(hash.slice(1));
-      if (params.get("type") === "invite") {
-        router.replace("/auth/set-password");
-      } else {
-        router.replace("/admin");
-      }
-    });
+    if (accessToken && refreshToken) {
+      supabase.auth
+        .setSession({ access_token: accessToken, refresh_token: refreshToken })
+        .then(({ error }) => {
+          if (error) {
+            router.replace("/admin/login");
+            return;
+          }
+          if (type === "invite") {
+            router.replace("/auth/set-password");
+          } else {
+            router.replace("/admin");
+          }
+        });
+    } else {
+      router.replace("/admin");
+    }
   }, [router]);
 
   return (
