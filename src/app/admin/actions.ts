@@ -2,7 +2,6 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
-import { createAdminClient } from "@/lib/supabase/admin";
 
 async function requireAuth() {
   const supabase = await createClient();
@@ -176,17 +175,4 @@ export async function signOut() {
   const supabase = await requireAuth();
   await supabase.auth.signOut();
   revalidatePath("/admin");
-}
-
-// ── Users ─────────────────────────────────────────────────────────────────────
-
-export async function inviteUser(email: string) {
-  await requireAuth();
-  const adminClient = createAdminClient();
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  const { error } = await adminClient.auth.admin.inviteUserByEmail(email, {
-    redirectTo: `${siteUrl}/auth/callback`,
-  });
-  if (error) throw new Error(error.message);
 }
