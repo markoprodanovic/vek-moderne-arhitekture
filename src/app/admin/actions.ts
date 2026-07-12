@@ -1,17 +1,23 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { createClient } from "@/lib/supabase/server";
 import { sql } from "@/lib/db";
+import {
+  requireAuth,
+  verifyPassword,
+  createSession,
+  destroySession,
+} from "@/lib/auth";
 import type { EraItem, ArchitectItem, LinkItem } from "@/types/admin";
 
-async function requireAuth() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Unauthorized");
-  return supabase;
+export async function signIn(
+  email: string,
+  password: string,
+): Promise<{ ok: true } | { ok: false; error: string }> {
+  const user = await verifyPassword(email, password);
+  if (!user) return { ok: false, error: "Invalid email or password." };
+  await createSession(user.id, user.email);
+  return { ok: true };
 }
 
 // Postgres SQLSTATEs raised when deleting a parent that still has children:
@@ -168,7 +174,7 @@ export async function reorderLinks(ids: string[]) {
 }
 
 export async function signOut() {
-  const supabase = await requireAuth();
-  await supabase.auth.signOut();
+  await requireAuth();
+  await destroySession();
   revalidatePath("/admin");
 }
